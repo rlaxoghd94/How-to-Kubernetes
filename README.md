@@ -13,3 +13,7 @@ Documents
   - [Kubernetes Object Management](./Documents/Kubernetes_Object_Management.md)
 
   - [Names](./Documents/Names.md)
+
+  - [Namespaces](./Documents/Namespaces.md)
+
+  - [Labels and Selectors](./Documents/Labels_and_Selectors.md)
