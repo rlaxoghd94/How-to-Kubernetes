@@ -227,4 +227,3 @@ Container Resource Monitoring records generic time-series metrics about containe
 ### Cluster-level Logging
 
 A cluster-level logging mechanism is responsible for saving container logs to a central log store with search/browsing interface.
-
