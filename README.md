@@ -20,11 +20,17 @@ Documents
 
   - [Names](./Documents/001-Overview/03-Working_with_Kubernetes_Objects/03-Names.md)
 
-<<<<<<< HEAD
-  - [Names](./Documents/Names.md)
+  - [Namespaces](./Documents/001-Overview/03-Working_with_Kubernetes_Objects/04-Namespaces.md)
+  
+  - [Labels and Selectors](./Documents/001-Overview/03-Working_with_Kubernetes_Objects/05-Labels_and_Selectors.md)
+  
+### Cluster Architecture
 
-  - [Namespaces](./Documents/Namespaces.md)
+- [Nodes](./Documents/002-Cluster_Architecture/01-Nodes.md)
 
-  - [Labels and Selectors](./Documents/Labels_and_Selectors.md)
-=======
->>>>>>> f8fb678b746fc062106716c872e8bb49dfca1f72
+
+## Practice
+
+- [Installation](./Practice/Minikube/001-Installation.md)
+
+- [Setup](./Practice/Minikube/002-Setup.md)
