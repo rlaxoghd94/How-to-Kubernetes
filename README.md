@@ -40,3 +40,5 @@ Documents
 ### High-Available Cluster
 
 - [Vagrant Setup](./Practice/Stacked_etcd/001-Vagrantfile.md)
+
+- [HAProxy Setup](./Practice/Stacked_etcd/002-HAProxy.md)
