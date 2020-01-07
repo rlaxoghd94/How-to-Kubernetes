@@ -38,3 +38,5 @@ Documents
 - [Setup](./Practice/Minikube/002-Setup.md)
 
 ### High-Available Cluster
+
+- [Vagrant Setup](./Practice/Stacked_etcd/001-Vagrantfile.md)
