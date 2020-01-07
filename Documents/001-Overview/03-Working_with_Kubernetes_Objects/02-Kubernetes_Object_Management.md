@@ -1,30 +1,28 @@
 # Kubernetes Object Management
 
-The `kubectl` command-line tool supports several different ways to create and manage Kubernetes objects.
+The `kubectl` command-line tool supports several different ways to create and manage Kubernetes objects. This document provides an overview of the different approaches.
 
 ## Management techniques
 
-***WARNING: A Kubernetes objecct should be managed using only one technique. Mixing and matching techniques for the same object results in undefined behavior***
-
-![Management Techniques](./Resources/Management_Techniques.png)
+![Management Techniques](./Resources/01-Management_Techniques.png)
 
 ## Imperative commands
 
-When using imperative commands, a user operates directly on live objects in a cluster. The user provides operations to the `kubectl` command as arguments or flags.
+When using imperative commands, a user operates directly on live objects in a cluster. The use provides operations to the `kubectl` command as arguements or flags.
 
-This is the simplest way to get started or to run a one-off task in a cluster. Because this technique operates directly on live objects, it provides no history of previous configurations.
+This is the *simplest* way to get started or to run a one-off task in a cluster. Because this technique operates directly on live objects, it provides no history of previous configurations.
 
 ### Examples
 
 Run an instance of the nginx container by creating a Deployment object:
 
-```sh
+```bash
 kubectl run nginx --image nginx
 ```
 
-Do the same thing using a different syntax:
+Do the same thing using a different syntax
 
-```sh
+```bash
 kubectl create deployment nginx --image nginx
 ```
 
@@ -42,7 +40,7 @@ Disadvantages compared to object configuration:
 
 - Commands do not provide an audit trail associated with changes
 
-- Commands do not provide a source of records exampt for what is live
+- Commands do not provide a source of records except for what is live
 
 - Commands do not provide a template for creating new objects
 
@@ -50,29 +48,29 @@ Disadvantages compared to object configuration:
 
 In imperative object configuration, the kubectl command specifies the operation(create, replace, etc), optional flags and at least one file name. The file specified must contain a full definition of the object in YAML or JSON format.
 
-### Example
+### Examples
 
 Create the objects defined in a configuration file:
 
-```sh
+```bash
 kubectl create -f nginx.yaml
 ```
 
 Delete the objects defined in two configuration files:
 
-```sh
+```bash
 kubectl delete -f nginx.yaml -f redis.yaml
 ```
 
-Update the objects defined in a configuration file by overwriting the live configuration:
+update the objects defined in a configuration file by overwriting the live configuration:
 
-```sh
+```bash
 kubectl replace -f nginx.yaml
 ```
 
 ### Trade-offs
 
-Advantages compare to imperative commands:
+Advantages compared to imperative commands:
 
 - Object configuration can be stored in a source control system such as Git
 
@@ -86,11 +84,9 @@ Disadvantages compared to imperative commands:
 
 - Object configuration requires the additional step of writing a YAML file
 
-Advantages comapred to declarative object configuration:
+Advantages compared to declarative object configuration:
 
 - Imperative object configuration behavior is simpler and easier to understand
-
-- As of Kubernetes version 1.5, imperative object configuration is more mature
 
 Disadvantages compared to declarative object configuration:
 
@@ -98,24 +94,22 @@ Disadvantages compared to declarative object configuration:
 
 - Updates to live objects must be reflected in configuration files, or they will be lost during the next replacement
 
-<br></br>
-
 ## Declarative object configuration
 
-When using declarative object configuration, a user operates on object configuration files stored locally, however the user does not define the operations to be taken on the files. Create, update, and delete operations are automatically detected per-object by `kubectl`. This enables working on directories, where different operations might be needed for different objects.
+When using declarative object configuration, a user operates on object configuration files stored locally, however the user does not define the operations to be take on the files. Create, update, and delete operations are automatically detected per-object by `kubectl`. This enables working on directories, where different operations might be needed for different objects.
 
 ### Examples
 
-Process all object configuration files in the `configs` directory, and create or patch the live objects. You can first `diff` to see what changes are going to be made, and then apply:
+Process all object configuration files in the `configs` directory, and create or patch the live objects. You can first `diff` to see what changes are going to be made, and they apply:
 
-```sh
+```bash
 kubectl diff -f configs/
 kubectl apply -f configs/
 ```
 
 Recursively process directories:
 
-```sh
+```bash
 kubectl diff -R -f configs/
 kubectl apply -R -f configs/
 ```
