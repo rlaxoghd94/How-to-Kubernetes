@@ -31,6 +31,10 @@ Documents
 
 ## Practice
 
+### Minikube
+
 - [Installation](./Practice/Minikube/001-Installation.md)
 
 - [Setup](./Practice/Minikube/002-Setup.md)
+
+### High-Available Cluster
