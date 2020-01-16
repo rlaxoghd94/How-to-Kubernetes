@@ -46,4 +46,4 @@ Documents
 
 - [HAProxy Setup](./Practice/Stacked_etcd/002-HAProxy.md)
 
-- [Stacked Etcd Setup](./003-Stacked_Etcd.md)
+- [Stacked Etcd Setup](./Practice/Stacked_etcd/003-Stacked_Etcd.md)
