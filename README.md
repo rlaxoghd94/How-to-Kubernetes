@@ -28,6 +28,9 @@ Documents
 
 - [Nodes](./Documents/002-Cluster_Architecture/01-Nodes.md)
 
+- [Master-Node Communication](./Documents/002-Cluster_Architecture/02-Master-Node_Communication.md)
+
+- [Controllers](./Documents/002-Cluster_Architecture/03-Controllers.md)
 
 ## Practice
 
@@ -42,3 +45,5 @@ Documents
 - [Vagrant Setup](./Practice/Stacked_etcd/001-Vagrantfile.md)
 
 - [HAProxy Setup](./Practice/Stacked_etcd/002-HAProxy.md)
+
+- [Stacked Etcd Setup](./003-Stacked_Etcd.md)
