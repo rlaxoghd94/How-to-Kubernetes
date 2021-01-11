@@ -7,5 +7,4 @@ Vagrant.configure("2") do |config|
             v.memory = 1024
     end
   end
-  config.vm.boot_timeout = 600
 end
