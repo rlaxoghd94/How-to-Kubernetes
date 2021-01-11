@@ -10,6 +10,8 @@ Documents
 
 - [1장: 쿠버네티스 아키텍쳐 이해](./Documents/001-쿠버네티스_아키텍쳐_이해.md)
 
+- [2장: 쿠버네티스 클러스터 생성하기](./Documents/002-쿠버네티스_클러스터_생성하기.md)
+
 ## Practice
 
 ### Minikube
